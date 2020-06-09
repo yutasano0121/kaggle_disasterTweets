@@ -1,0 +1,1 @@
+s3://sagemaker-us-east-2-815596061983/kaggle/tweetSentiment/model/tensorflow-training-2020-06-09-19-26-52-721/output/model.tar.gz

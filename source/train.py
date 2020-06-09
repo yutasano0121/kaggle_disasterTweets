@@ -83,7 +83,6 @@ def model(x_train, y_train, x_test, y_test):
 
 
 def _load_training_data(base_dir):
-    """Load MNIST training data"""
     train = pd.read_csv(os.path.join(base_dir, 'train_processed_split.csv'), header=None)
     y_train = train[0].values
     x_train = train.drop(0, axis=1).to_numpy()
@@ -91,7 +90,6 @@ def _load_training_data(base_dir):
 
 
 def _load_validation_data(base_dir):
-    """Load MNIST testing data"""
     val = pd.read_csv(os.path.join(base_dir, 'validation.csv'), header=None)
     y_val = val[0].values
     x_val = val.drop(0, axis=1).to_numpy()
@@ -127,8 +125,8 @@ if __name__ == "__main__":
     train_data, train_labels = _load_training_data(args.train)
     eval_data, eval_labels = _load_validation_data(args.train)
 
-    mnist_classifier = model(train_data, train_labels, eval_data, eval_labels)
+    classifier = model(train_data, train_labels, eval_data, eval_labels)
 
     if args.current_host == args.hosts[0]:
         # save model to an S3 directory with version number '00000001'
-        mnist_classifier.save(os.path.join(args.sm_model_dir, '000000001'), 'my_model.h5')
+        classifier.save(os.path.join(args.sm_model_dir, '000000001'), 'my_model.h5')
