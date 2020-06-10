@@ -18,7 +18,7 @@ Data available at https://www.kaggle.com/c/nlp-getting-started/
     3. Run `XGBoost_test.ipynb`, which make prediction using the trained model.<br>
 <br>
 
-F1 score: 0.67280
+F1 score: 0.66359
 
 * **TensorFlow model**<br>
     1. Run `dataExploration.ipynb`.
@@ -26,7 +26,7 @@ F1 score: 0.67280
     3. Run `tensorflow_test.ipynb`.<br>
 <br>
 
-F1 score: 0.69836 (Another model **without** tuning and early stopping had a better score, 0.72801. Maybe due to the early stopping?)
+F1 score: 0.68916 (Another model **without** tuning and early stopping had a better score, 0.72801. Maybe due to the early stopping?)
 
 * **Bert model**<br>
     Adopted from this shared notebook https://www.kaggle.com/gunesevitan/nlp-with-disaster-tweets-eda-cleaning-and-bert for an implementation in SageMaker. <br>
