@@ -1,7 +1,7 @@
 pandas
 numpy
 sklearn
-tensorflow==2.1.0
+tensorflow==2.7.2
 tensorflow_addons
 tensorflow_hub
 sentencepiece
